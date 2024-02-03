@@ -37,6 +37,7 @@ index.html * {
 
 body {
   background: var(--bg-url) no-repeat center top/cover;
+  height: 100vh;
 }
 
 body * {
@@ -183,4 +184,16 @@ footer {
 
 footer b {
   font-size: 16px;
+}
+
+/* media queries */
+
+@media (min-width: 700px) {
+  :root {
+    --bg--url: url(assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg--url: url(assets/bg-desktop-light.jpg);
+  }
 }
