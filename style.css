@@ -96,20 +96,24 @@ b {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+
+  animation: slide-back 0.6s;
 }
 
 .light #switch button {
-  right: 0;
-  left: inherit;
+  /* right: 0;
+  left: inherit; */
+  animation: slide-in 0.6s forwards;
 }
 
 #switch span {
   display: block;
   width: 64px;
-  height: 24px;
+  height: 18px;
   background: var(--bg-surface);
   border: 1px solid var(--stroke-color);
   border-radius: 9999px;
+
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
@@ -195,5 +199,24 @@ footer b {
 
   .light {
     --bg--url: url(assets/bg-desktop-light.jpg);
+  }
+}
+
+/* animation button */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
